@@ -12,7 +12,7 @@ Vue.use(ElementUI);
 setRem();
 
 new Vue({
-  router,
   store,
+  router,
   render: h => h(App)
 }).$mount("#app");
