@@ -1,14 +1,15 @@
 <template>
-  <div class="home"><span>index</span><span>123123</span></div>
+  <div class="wrp">
+    <olmap />
+  </div>
 </template>
 <script>
+import olmap from "./../openlayers";
 import { mapActions } from "vuex";
 export default {
-  name: "home",
+  components: { olmap },
   data() {
-    return {
-      adcode: "330000"
-    };
+    return {};
   },
   methods: {
     ...mapActions("map", ["getBoundary"])
@@ -19,9 +20,8 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.home {
-  & span {
-    color: blue;
-  }
+.wrp {
+  width: 100%;
+  height: 100%;
 }
 </style>
